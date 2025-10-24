@@ -15,19 +15,33 @@ Build the Use-case
 
 # Use Case
 ## Narrative
-I am text of the narrative [0]. There should be references included [1]. May be embedded in a sentence [2], and they precede punctuation [1].
+Software reverse engineering is a difficult and tedious process due a lot of the information of the original data (like the names of functions and variables) being lost during the process of disassembly and decompilation. Using reverse engineering software like Ghidra can make this process easier through collecting all the symbols used in a binary file, but these symbols usually don't have their original name (making the process of trying to figure out what they do more difficult). 
+
+My plan is to make a knowledge graph based on the symbol table in Ghidra to help users more easily visualize how all the data from an executable file fits together. Initially, the knowledge graph will just use the data from the symbol table, with the purpose of it being to more easily see how the data from a binary executable fits together. Especially after a user renames some labels for variables or functions, the knowledge graph would make it easier to visualize how the different pieces work together to gain a better overall understanding of how the program executable works.
+
+I also hope to expand the knowledge graph to apply to finding dependency vulnerabilities in a software supply chain. Specifically, connecting malware-specific behavior beyond just one artifact or executable file to detect vulnerabilities within a software supply chain.
+<!-- I am not quite sure how I will be able to apply the knowledge graph into detecting vulnerabilities within a software supply chain, but I'll figure that out later and instead currently focus on making a knowledge graph specifically on the symbol table. -->
 
 ## Competency Questions
+<!--
 * Competency Question<br>
 Bridges Datasets: dataset 1, dataset 2, ...
 * Competency Question<br>
 Bridges Datasets: dataset 1, dataset 2, ...
 * Competency Question<br>
 Bridges Datasets: dataset 1, dataset 2, ...
+-->
+* Is the general purpose of the original executable file known?
+* Is the original exectuable file known to be malicious?
+* How would a user query the knowledge graph to see the relationships between the symbols?
+* 
 
+<!-- 
+How many datasets is appropriate for my scale of KG?
+Will just this one github repo with loads of ELF fies be enough?
+ -->
 ## Potential Datasets
-* [Potential Dataset Name](https://dataset-link.com/)
-* [Potential Dataset Name](https://dataset-link.com/)
+* [Benignware and Malware Elf Binaries](https://github.com/nimrodpar/Labeled-Elfs)
 
 ## Existing Resources
 * [Existing Resource Name](https://resource-link.com/)
