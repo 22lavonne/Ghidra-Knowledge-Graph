@@ -34,7 +34,13 @@ Bridges Datasets: dataset 1, dataset 2, ...
 * Is the general purpose of the original executable file known?
 * Is the original exectuable file known to be malicious?
 * How would a user query the knowledge graph to see the relationships between the symbols?
-* 
+* What variables and functions are used the most within the file?
+* Is the current executable file part of a larger structure or supply chain?
+* Are there any imported DLLs that are known to be vulnerable?
+* Are there any imported DLLs that are used in other known malware?
+* Does the file implement any known malware techniques like code injection?
+* What percentage of the functions in the binary file are imported (are external)?
+* Are there any instances of memeory leaks within the executable file?
 
 <!-- 
 How many datasets is appropriate for my scale of KG?
