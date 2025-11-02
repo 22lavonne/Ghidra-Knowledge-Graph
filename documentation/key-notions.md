@@ -40,6 +40,8 @@ A symbol is a named entity in an executable file that is associated with a speci
 "A class is a type of symbol"
 * `Symbol superClassOf Function` <br />
 "A function is a type of symbol"
+* `Symbol superClassOf Variable` <br />
+"A variable is a type of symbol"
 * `Symbol superClassOf Namespace` <br />
 "A namespace is a type of symbol"
 * `Symbol superClassOf Label` <br />
@@ -64,6 +66,18 @@ A reference is where two memory addresses interact in some way with each other, 
 * `Reference hasOperandIndex xsd:integer exactly 1 index` <br />
 "A reference has exactly one operand index indicated by an integer"
 
+## Address
+### Description
+An object that holds the Memory address of a given symbol. It's an object itself so it can point to other objects.
+
+![Address](../Schema/schema_diagram_images/address_schema.png)
+
+### Axioms
+* `Address pointsTo Symbol exactly 1 Symbol` <br />
+"An address points to exactly one symbol"
+* `Address addressOf xsd:string` <br />
+"An address refers to a memory address represented by a string"
+
 ## Import/Export
 ### Description
 Imports allow files to use outside functions within the current file through dynamic link libraries (DLLs). Exports allow other files to use the functions from the current file through DLLs. The imports and edxports are important to look at to see if anything imported or exported is either vulnerable or is similar to other malware behavior, as they can direclty affect the safety of the other files in the supplu chain.
@@ -74,8 +88,8 @@ Imports allow files to use outside functions within the current file through dyn
 "Every import is a symbol"
 * `Export subClassOf Symbol` <br />
 "Every export is a symbol"
-* `Import declares min 1 DLL` <br />
-"Every import declares at least one DLL"
+* `Import declares min 0 DLL` <br />
+"Every import declares 0 or more DLLs"
 * `Export declares min 0 DLL` <br />
 "Every export declares 0 or more DLLs"
 * `Import hasLabel Label exactly 1 label` <br />
@@ -94,18 +108,22 @@ Keeps track of all the aspects of a function, including the variables passed in 
 "Every function is a symbol"
 * `Function hasLabel Label exactly 1 label` <br />
 "Every function has exactly one label"
-* `Function hasReturnType DataType exactly 1 datatype` <br />
-"Every function has exactly one return type"
-* `Function returns min 0 max 1 Variable` <br />
+* `Function hasReturnType DataType min 0 max 1 datatype` <br />
+"Every function has either no return type (void) or one return type"
+* `Function returns min 0 max 1 variable` <br />
 "Every function returns either no variables or one variable"
-* `Function declares min 0 localVariables` <br />
+* `Function declaresLocalVariable min 0 Variable` <br />
 "A function can declare 0 or more local variables"
-* `Function passIn min 0 parameters` <br />
+* `Function hasParameter min 0 variable` <br />
 "A function can pass in 0 or more parameters"
 * `Function calls min 0 Function` <br />
 "A function can call 0 or more other functions"
 * `Function calledBy min 0 Function` <br />
 "A function can be called by 0 or more other functions"
+* `Function definedIn class exactly 1 Class` <br />
+"A function is defined in exactly one class"
+* `Function definedIn namespace min 1 Namespace` <br />
+"A function is defined in one or more namespaces"
 
 ## Variable
 ### Description
@@ -113,16 +131,46 @@ Keeps track of all the informtion about a variable, including what kind of varia
 
 ![Variable](../Schema/schema_diagram_images/variable_schema.png)
 ### Axioms
-* `Parameter subClassOf Variable` <br />
-"Every parameter is a variable"
-* `GlobalVariale subClassOf Variable` <br />
-"Every GlobalVariable is a variable"
-* `LocalVariable subClassOf Variable` <br />
-"Every LocalVariable is a variable"
-* `Variable hasLabel Label exactly 1 label` <br />
+* `Variable subClassOf Symbol` <br />
+"Every variable is a symbol"
+* `Variable definedIn Namespace min 1 Namespace` <br />
+"Every variable is defined in at least one namespace"
+* `Variable definedInGlobalNamespace extactly 1 Namespace` <br />
+"Every variable is defined in the global namespace"
+* `Variable localaVariableDefinedIn Class exactly 1 Class` <br />
+"Every local variable is defined in a class"
+* `Variable hasLabel Label exactly 1 Label` <br />
 "Every variable has exactly one label"
-* `Variable hasDataType DataType exactly 1 datatype` <br />
+* `Variable hasDataType DataType exactly 1 Datatype` <br />
 "Every variable has exactly one data type"
+
+## Data Type
+### Description
+An object that signifies the data type of a variable, or the return type of a function.
+
+![DataType](../Schema/schema_diagram_images/datatype_schema.png)
+
+### Axioms
+* `Data Type hasDataTypeName xsd:string exactly 1 name` <br />
+"Data type has exactly one data type name indicated by a string"
+
+## Class
+### Description
+
+![Class](../Schema/schema_diagram_images/class_schema.png)
+
+### Axioms
+* `Class subClassOf Symbol` <br />
+"Every class is a symbol"
+* `Class definesFunction Function min 0 Function` <br />
+"Every class defines 0 or more functions"
+* `Class hasLabel Label exactly 1 Label` <br />
+"Every class has exactly one label"
+* `Class definesLocalVariable variable min 0 variable` <br />
+"Every class defines 0 or more local variables"
+* `Class definedIn Namespace min 1 Namespace` <br />
+"Every class is defined in at least one namespace"
+
 
 ## Label
 ### Description
