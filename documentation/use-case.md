@@ -41,6 +41,10 @@ Bridges Datasets: dataset 1, dataset 2, ...
 * Does the file implement any known malware techniques like code injection?
 * What percentage of the functions in the binary file are imported (are external)?
 * Are there any instances of memeory leaks within the executable file?
+* How does the program access memory?
+* Do the frequency and type of instructions indicate malicious behavior
+   * Does the frequency of the CALL instructions equal the frequency of RET instructions?
+   * Does the frequency of PUSH instructions equal the frequency of POP functions?
 
 <!-- 
 How many datasets is appropriate for my scale of KG?
@@ -50,8 +54,7 @@ Will just this one github repo with loads of ELF fies be enough?
 * [Benignware and Malware Elf Binaries](https://github.com/nimrodpar/Labeled-Elfs)
 
 ## Existing Resources
-* [Existing Resource Name](https://resource-link.com/)
-* [Existing Resource Name](https://resource-link.com/)
+* [Adapting Linguistic Deception Cues for Malware Detection](https://etd.ohiolink.edu/acprod/odb_etd/ws/send_file/send?accession=wright1421025881&disposition=inline)
 
 ## References
 <!-- References should follow a consistent format. They should appear in order of appearance in the narrative section. Remove this comment. -->
