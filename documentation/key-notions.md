@@ -124,6 +124,8 @@ Keeps track of all the aspects of a function, including the variables passed in 
 "A function is defined in exactly one class"
 * `Function definedIn namespace min 1 Namespace` <br />
 "A function is defined in one or more namespaces"
+* `Function containsInstruction min 1 instruction` <br />
+"A function contains one or more instructions"
 
 ## Variable
 ### Description
@@ -197,6 +199,34 @@ Namespaces group together symbols like functions and classes to make sure there 
 "Every name space contains at least 0 or more symbols"
 * `Namespace hasName xsd:string exactly 1 name` <br />
 "Every namespace has exactly one name indicated by xsd:string"
+
+## Instruction
+### Description
+Assembly instructions that come from Ghidra's disassembly from an executable file. 
+
+![Instruction](../Schema/schema_diagram_images/instruction_schema.png)
+
+### Axioms
+* `Instruction hasOpcode exactly 1 opcode` <br />
+"Every instruction has exactly 1 opcode"
+* `Instruction hasSourceOperand min 0 Register` <br />
+"Every instruction has 0 or more registers as source operads"
+* `Instruction hasDestinationOperand min 0 max 1 Register` <br />
+"Every instruction has at most 1 register as a destination operand"
+* `Instruction hasSourceOperand min 0 Label` <br />
+"Every instruction has 0 or more labels as source operads"
+* `Instruction hasDestinationOperand min 0 max 1 Label` <br />
+"Every instruction has at most 1 label as a destination operand"
+* `Instruction hasSourceOperand min 0 Address` <br />
+"Every instruction has 0 or more addresses as source operads"
+* `Instruction hasDestinationOperand min 0 max 1 Address` <br />
+"Every instruction has at most 1 address as a destination operand"
+* `Instruction hasSourceOperand min 0 ImmediateOperands` <br />
+"Every instruction has 0 or more immedate operands as source operads" <br />
+<br />
+* Basically, operands can be registers, memory addresses (including labels), or immediate operands (direct values). Overall, an instruction can have 0 or more source operands total, and 0-1 destination operands total.
+
+
 
 ## Overall Schema Diagram
 ![Schema](../Schema/schema_diagram_images/schema.png)
