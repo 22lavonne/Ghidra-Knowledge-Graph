@@ -197,8 +197,8 @@ Namespaces group together symbols like functions and classes to make sure there 
 "Every namespace is a symbol"
 * `Namespace declares min 0 Symbol` <br />
 "Every name space declares 0 or more symbols"
-* `Symbol declaredBy Namespace exactly 1 Namespace` <br />
-"Every symbol is declared by exactly 1 namespace"
+* `Symbol declaredBy Namespace min 1 Namespace` <br />
+"Every symbol is declared by at least 1 namespace"
 * `Namespace hasName xsd:string exactly 1 name` <br />
 "Every namespace has exactly one name indicated by xsd:string"
 

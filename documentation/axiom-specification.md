@@ -1,3 +1,15 @@
+<!--     
+TODO:
+For all the relations assigned as functionality, determine if they are
+- Qualified Functionality
+- Scoped functionality
+- Qualified scoped functionality
+- inverse functionality
+- inverse qualified functionality
+- inverse scoped functionality
+- inverse qualified scoped
+-->
+
 ## List of Axioms
 
 | Number    | Subject       | Relationship      | Object        |
@@ -62,6 +74,7 @@
 | 58        | Symbol        | performsRole | Operand |
 
 
+
 ## Axiom Selection
 
 ### Symbol
@@ -75,7 +88,7 @@
 | Scoped range                              |    |    |    |    |    |    |    |    |    |
 | Existential                               |    |    |    |    |    |    |    |    |    |
 | Inverse existential                       |    |    |    |    |    |    |    |    |    |
-| Functionality                             |    |    |    |    |    |    |    |    |    |
+| Functionality                             |    | ✓  |    |    |    |    |    |    |    |
 | Qualified functionality                   |    |    |    |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |    |    |    |
@@ -103,7 +116,7 @@
 | Scoped range                              |    |    |    |    |    |    |
 | Existential                               |    |    |    |    |    |    |
 | Inverse existential                       |    |    |    |    |    |    |
-| Functionality                             |    |    |    |    |    |    |
+| Functionality                             | ✓ |  ✓ |  ✓ | ✓  | ✓ |  ✓ |
 | Qualified functionality                   |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |
@@ -113,7 +126,6 @@
 | Inverse qualified scoped functionality    |    |    |    |    |    |    |
 | Structural tautology                      |    |    |    |    |    |    |
 |                                           |    |    |    |    |    |    |
-| For the Property                          |    |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |    |
 | Transitivity                              |    |    |    |    |    |    |
@@ -131,7 +143,7 @@
 | Scoped range                              |    |    |    |    |    |    |
 | Existential                               |    |    |    |    |    |    |
 | Inverse existential                       |    |    |    |    |    |    |
-| Functionality                             |    |    |    |    |    |    |
+| Functionality                             |    |    |    |    |  ✓  |  ✓  |
 | Qualified functionality                   |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |
@@ -141,7 +153,6 @@
 | Inverse qualified scoped functionality    |    |    |    |    |    |    |
 | Structural tautology                      |    |    |    |    |    |    |
 |                                           |    |    |    |    |    |    |
-| For the Property                          |    |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |    |
 | Transitivity                              |    |    |    |    |    |    |
@@ -160,7 +171,7 @@
 | Scoped range                              |    |    |    |    |    |    |    |    |    |    |    |
 | Existential                               |    |    |    |    |    |    |    |    |    |    |    |
 | Inverse existential                       |    |    |    |    |    |    |    |    |    |    |    |
-| Functionality                             |    |    |    |    |    |    |    |    |    |    |    |
+| Functionality                             |    |  ✓ | ✓ | ✓  |    |    |    |    |  ✓ |    |    |
 | Qualified functionality                   |    |    |    |    |    |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |    |    |    |    |    |
@@ -170,7 +181,6 @@
 | Inverse qualified scoped functionality    |    |    |    |    |    |    |    |    |    |    |    |
 | Structural tautology                      |    |    |    |    |    |    |    |    |    |    |    |
 |                                           |    |    |    |    |    |    |    |    |    |    |    |
-| For the Property                          |    |    |    |    |    |    |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |    |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |    |    |    |    |    |    |
 | Transitivity                              |    |    |    |    |    |    |    |    |    |    |    |
@@ -188,7 +198,7 @@
 | Scoped range                              |    |    |    |    |    |    |    |
 | Existential                               |    |    |    |    |    |    |    |
 | Inverse existential                       |    |    |    |    |    |    |    |
-| Functionality                             |    |    |    |    |    |    |    |
+| Functionality                             |    |    |  ✓ |    | ✓ | ✓  | ✓ |
 | Qualified functionality                   |    |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |    |
@@ -198,7 +208,6 @@
 | Inverse qualified scoped functionality    |    |    |    |    |    |    |    |
 | Structural tautology                      |    |    |    |    |    |    |    |
 |                                           |    |    |    |    |    |    |    |
-| For the Property                          |    |    |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |    |    |
 | Transitivity                              |    |    |    |    |    |    |    |
@@ -215,7 +224,7 @@
 | Scoped range                              |    |    |    |    |    |
 | Existential                               |    |    |    |    |    |
 | Inverse existential                       |    |    |    |    |    |
-| Functionality                             |    |    |    |    |    |
+| Functionality                             |    |    |  ✓  |    |    |
 | Qualified functionality                   |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |
@@ -225,7 +234,6 @@
 | Inverse qualified scoped functionality    |    |    |    |    |    |
 | Structural tautology                      |    |    |    |    |    |
 |                                           |    |    |    |    |    |
-| For the Property                          |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |
 | Transitivity                              |    |    |    |    |    |
@@ -242,7 +250,7 @@
 | Scoped range                              |    |    |    |
 | Existential                               |    |    |    |
 | Inverse existential                       |    |    |    |
-| Functionality                             |    |    |    |
+| Functionality                             |    | ✓  | ✓  |
 | Qualified functionality                   |    |    |    |
 | Scoped functionality                      |    |    |    |
 | Qualified scoped functionality            |    |    |    |
@@ -252,7 +260,6 @@
 | Inverse qualified scoped functionality    |    |    |    |
 | Structural tautology                      |    |    |    |
 |                                           |    |    |    |
-| For the Property                          |    |    |    |
 | Symmetry                                  |    |    |    |
 | Asymmetry                                 |    |    |    |
 | Transitivity                              |    |    |    |
@@ -269,7 +276,7 @@
 | Scoped range                              |    |    |    |    |
 | Existential                               |    |    |    |    |
 | Inverse existential                       |    |    |    |    |
-| Functionality                             |    |    |    |    |
+| Functionality                             |    |    |    |  ✓ |
 | Qualified functionality                   |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |
@@ -279,7 +286,6 @@
 | Inverse qualified scoped functionality    |    |    |    |    |
 | Structural tautology                      |    |    |    |    |
 |                                           |    |    |    |    |
-| For the Property                          |    |    |    |    |
 | Symmetry                                  |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |
 | Transitivity                              |    |    |    |    |
@@ -297,7 +303,7 @@
 | Scoped range                              |    |    |    |    |    |    |    |
 | Existential                               |    |    |    |    |    |    |    |
 | Inverse existential                       |    |    |    |    |    |    |    |
-| Functionality                             |    |    |    |    |    |    |    |
+| Functionality                             |  ✓ |    | ✓  |    |    |    |    |
 | Qualified functionality                   |    |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |    |
@@ -307,7 +313,6 @@
 | Inverse qualified scoped functionality    |    |    |    |    |    |    |    |
 | Structural tautology                      |    |    |    |    |    |    |    |
 |                                           |    |    |    |    |    |    |    |
-| For the Property                          |    |    |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |    |    |
 | Transitivity                              |    |    |    |    |    |    |    |
