@@ -195,8 +195,10 @@ Namespaces group together symbols like functions and classes to make sure there 
 ### Axioms
 * `Namespace subClassOf Symbol` <br />
 "Every namespace is a symbol"
-* `Namespace contains min 0 Symbol` <br />
-"Every name space contains at least 0 or more symbols"
+* `Namespace declares min 0 Symbol` <br />
+"Every name space declares 0 or more symbols"
+* `Symbol declaredBy Namespace exactly 1 Namespace` <br />
+"Every symbol is declared by exactly 1 namespace"
 * `Namespace hasName xsd:string exactly 1 name` <br />
 "Every namespace has exactly one name indicated by xsd:string"
 
@@ -207,7 +209,7 @@ Assembly instructions that come from Ghidra's disassembly from an executable fil
 ![Instruction](../Schema/schema_diagram_images/instruction_schema.png)
 
 ### Axioms
-* `Instruction hasOpcode exactly 1 opcode` <br />
+* `Instruction hasOpcode exactly 1 Opcode` <br />
 "Every instruction has exactly 1 opcode"
 * `Instruction hasSourceOperand min 0 Operand` <br />
 "Every instruction has 0 or more source operands"
