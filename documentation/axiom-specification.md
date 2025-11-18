@@ -49,7 +49,7 @@ For all the relations assigned as functionality, determine if they are
 | 33        | Variable      | subClassOf | Symbol |
 | 34        | Variable      | definedIn | Namespace |
 | 35        | Variable      | definedInGlobalNamespace | Namespace |
-| 36        | Variable      | localaVariableDefinedIn | Class |
+| 36        | Variable      | localVariableDefinedIn | Class |
 | 37        | Variable      | hasLabel | Label |
 | 38        | Variable      | hasDataType | Datatype |
 | 39        | Data Type     | hasDataTypeName | xsd:string|
@@ -81,6 +81,7 @@ For all the relations assigned as functionality, determine if they are
 
 |                                           | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 
 | ---------                                 |----|----|----|----|----|----|----|----|----|
+| Subclass                                  |    |    |    |    |    |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |    |    |    |    |  
 | Domain                                    |    |    |    |    |    |    |    |    |    |
 | Scoped domain                             |    |    |    |    |    |    |    |    |    |
@@ -88,7 +89,7 @@ For all the relations assigned as functionality, determine if they are
 | Scoped range                              |    |    |    |    |    |    |    |    |    |
 | Existential                               |    |    |    |    |    |    |    |    |    |
 | Inverse existential                       |    |    |    |    |    |    |    |    |    |
-| Functionality                             |    | ✓  |    |    |    |    |    |    |    |
+| Functionality                             |    | x  |    |    |    |    |    |    |    |
 | Qualified functionality                   |    |    |    |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |    |    |    |
@@ -96,7 +97,7 @@ For all the relations assigned as functionality, determine if they are
 | Inverse qualified functionality           |    |    |    |    |    |    |    |    |    |
 | Inverse scoped functionality              |    |    |    |    |    |    |    |    |    |
 | Inverse qualified scoped functionality    |    |    |    |    |    |    |    |    |    |
-| Structural tautology                      |    |    |    |    |    |    |    |    |    |
+| Structural tautology                      | x  |  x |    |    |    |    |    |    |    |
 |                                           |    |    |    |    |    |    |    |    |    |
 | For the Property                          |    |    |    |    |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |    |    |    |    |
@@ -109,14 +110,15 @@ For all the relations assigned as functionality, determine if they are
 
 |                                           | 10 | 11 | 12 | 13 | 14 | 15 | 
 | ---------                                 |----|----|----|----|----|----|
+| Subclass                                  |    |    |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |    |
 | Domain                                    |    |    |    |    |    |    |
 | Scoped domain                             |    |    |    |    |    |    |
-| Range                                     |    |    |    |    |    |    |
+| Range                                     |  x |    |    |    |    |    |
 | Scoped range                              |    |    |    |    |    |    |
-| Existential                               |    |    |    |    |    |    |
+| Existential                               | x  |  x |    |  x |    |    |
 | Inverse existential                       |    |    |    |    |    |    |
-| Functionality                             | ✓ |  ✓ |  ✓ | ✓  | ✓ |  ✓ |
+| Functionality                             | x  |  x |  x | x  | x  |  x |
 | Qualified functionality                   |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |
@@ -124,7 +126,7 @@ For all the relations assigned as functionality, determine if they are
 | Inverse qualified functionality           |    |    |    |    |    |    |
 | Inverse scoped functionality              |    |    |    |    |    |    |
 | Inverse qualified scoped functionality    |    |    |    |    |    |    |
-| Structural tautology                      |    |    |    |    |    |    |
+| Structural tautology                      |    |    |    |    | x  | x  |
 |                                           |    |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |    |
@@ -136,14 +138,15 @@ For all the relations assigned as functionality, determine if they are
 
 |                                           | 16 | 17 | 18 | 19 | 20 | 21 | 
 | ---------                                 |----|----|----|----|----|----|
+| Subclass                                  | x  | x  |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |    |
 | Domain                                    |    |    |    |    |    |    |
 | Scoped domain                             |    |    |    |    |    |    |
-| Range                                     |    |    |    |    |    |    |
+| Range                                     |    |    |    |    |  x | x  |
 | Scoped range                              |    |    |    |    |    |    |
 | Existential                               |    |    |    |    |    |    |
 | Inverse existential                       |    |    |    |    |    |    |
-| Functionality                             |    |    |    |    |  ✓  |  ✓  |
+| Functionality                             |    |    |    |    |  x |  x |
 | Qualified functionality                   |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |
@@ -151,7 +154,7 @@ For all the relations assigned as functionality, determine if they are
 | Inverse qualified functionality           |    |    |    |    |    |    |
 | Inverse scoped functionality              |    |    |    |    |    |    |
 | Inverse qualified scoped functionality    |    |    |    |    |    |    |
-| Structural tautology                      |    |    |    |    |    |    |
+| Structural tautology                      |    |    |    |    |  x | x  |
 |                                           |    |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |    |
@@ -164,14 +167,15 @@ For all the relations assigned as functionality, determine if they are
 
 |                                           | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 |
 | ---------                                 |----|----|----|----|----|----|----|----|----|----|----|
+| Subclass                                  | x  |    |    |    |    |    |    |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |    |    |    |    |    |    |  
 | Domain                                    |    |    |    |    |    |    |    |    |    |    |    |
 | Scoped domain                             |    |    |    |    |    |    |    |    |    |    |    |
-| Range                                     |    |    |    |    |    |    |    |    |    |    |    |
+| Range                                     |    |  x | x  | x  | x  | x  |    |    |    |    |    |
 | Scoped range                              |    |    |    |    |    |    |    |    |    |    |    |
-| Existential                               |    |    |    |    |    |    |    |    |    |    |    |
+| Existential                               |    |    |    |    | x  | x  |    |    |    |    |  x |
 | Inverse existential                       |    |    |    |    |    |    |    |    |    |    |    |
-| Functionality                             |    |  ✓ | ✓ | ✓  |    |    |    |    |  ✓ |    |    |
+| Functionality                             |    |  x | x  | x  |    |    |    |    |  x |    |    |
 | Qualified functionality                   |    |    |    |    |    |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |    |    |    |    |    |
@@ -179,7 +183,7 @@ For all the relations assigned as functionality, determine if they are
 | Inverse qualified functionality           |    |    |    |    |    |    |    |    |    |    |    |
 | Inverse scoped functionality              |    |    |    |    |    |    |    |    |    |    |    |
 | Inverse qualified scoped functionality    |    |    |    |    |    |    |    |    |    |    |    |
-| Structural tautology                      |    |    |    |    |    |    |    |    |    |    |    |
+| Structural tautology                      |    |  x |  x |  x |    |    |  x |  x |  x | x  |  x |
 |                                           |    |    |    |    |    |    |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |    |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |    |    |    |    |    |    |
@@ -191,14 +195,15 @@ For all the relations assigned as functionality, determine if they are
 
 |                                           | 33 | 34 | 35 | 36 | 37 | 38 | 39 |
 | ---------                                 |----|----|----|----|----|----|----|
+| Subclass                                  | x  |    |    |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |    |    |
-| Domain                                    |    |    |    |    |    |    |    |
+| Domain                                    |    |    |    | x  |    |    |    |
 | Scoped domain                             |    |    |    |    |    |    |    |
-| Range                                     |    |    |    |    |    |    |    |
+| Range                                     |    |    |  x |    |  x |  x |    |
 | Scoped range                              |    |    |    |    |    |    |    |
 | Existential                               |    |    |    |    |    |    |    |
-| Inverse existential                       |    |    |    |    |    |    |    |
-| Functionality                             |    |    |  ✓ |    | ✓ | ✓  | ✓ |
+| Inverse existential                       |    |    |    |  x |    |    |    |
+| Functionality                             |    |    |  x |    | x  | x  | x  |
 | Qualified functionality                   |    |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |    |
@@ -206,7 +211,7 @@ For all the relations assigned as functionality, determine if they are
 | Inverse qualified functionality           |    |    |    |    |    |    |    |
 | Inverse scoped functionality              |    |    |    |    |    |    |    |
 | Inverse qualified scoped functionality    |    |    |    |    |    |    |    |
-| Structural tautology                      |    |    |    |    |    |    |    |
+| Structural tautology                      |    |  x |  x |  x | x  |  x |    |
 |                                           |    |    |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |    |    |
@@ -217,14 +222,15 @@ For all the relations assigned as functionality, determine if they are
 ### Class
 |                                           | 40 | 41 | 42 | 43 | 44 |
 | ---------                                 |----|----|----|----|----|
+| Subclass                                  | x  |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |
 | Domain                                    |    |    |    |    |    |
 | Scoped domain                             |    |    |    |    |    |
-| Range                                     |    |    |    |    |    |
+| Range                                     |    |  x |    |    |    |
 | Scoped range                              |    |    |    |    |    |
-| Existential                               |    |    |    |    |    |
+| Existential                               |    |  x |  x |  x |    |
 | Inverse existential                       |    |    |    |    |    |
-| Functionality                             |    |    |  ✓  |    |    |
+| Functionality                             |    |    |  x |    |    |
 | Qualified functionality                   |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |
@@ -232,7 +238,7 @@ For all the relations assigned as functionality, determine if they are
 | Inverse qualified functionality           |    |    |    |    |    |
 | Inverse scoped functionality              |    |    |    |    |    |
 | Inverse qualified scoped functionality    |    |    |    |    |    |
-| Structural tautology                      |    |    |    |    |    |
+| Structural tautology                      |    | x  | x  |  x | x  |
 |                                           |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |
@@ -243,14 +249,15 @@ For all the relations assigned as functionality, determine if they are
 ### Label
 |                                           | 45 | 46 | 47 |
 | ---------                                 |----|----|----|
+| Subclass                                  |  x |    |    |
 | Class disjointness                        |    |    |    |
 | Domain                                    |    |    |    |
 | Scoped domain                             |    |    |    |
-| Range                                     |    |    |    |
+| Range                                     |    |    |  x |
 | Scoped range                              |    |    |    |
-| Existential                               |    |    |    |
+| Existential                               |    |    |  x |
 | Inverse existential                       |    |    |    |
-| Functionality                             |    | ✓  | ✓  |
+| Functionality                             |    | x  | x  |
 | Qualified functionality                   |    |    |    |
 | Scoped functionality                      |    |    |    |
 | Qualified scoped functionality            |    |    |    |
@@ -258,7 +265,7 @@ For all the relations assigned as functionality, determine if they are
 | Inverse qualified functionality           |    |    |    |
 | Inverse scoped functionality              |    |    |    |
 | Inverse qualified scoped functionality    |    |    |    |
-| Structural tautology                      |    |    |    |
+| Structural tautology                      |    |    |  x |
 |                                           |    |    |    |
 | Symmetry                                  |    |    |    |
 | Asymmetry                                 |    |    |    |
@@ -269,6 +276,7 @@ For all the relations assigned as functionality, determine if they are
 ### Namespace
 |                                           | 48 | 49 | 50 | 51 |
 | ---------                                 |----|----|----|----|
+| Subclass                                  | x  |    |    |    |
 | Class disjointness                        |    |    |    |    |
 | Domain                                    |    |    |    |    |
 | Scoped domain                             |    |    |    |    |
@@ -276,7 +284,7 @@ For all the relations assigned as functionality, determine if they are
 | Scoped range                              |    |    |    |    |
 | Existential                               |    |    |    |    |
 | Inverse existential                       |    |    |    |    |
-| Functionality                             |    |    |    |  ✓ |
+| Functionality                             |    |    |    |  x |
 | Qualified functionality                   |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |
@@ -284,7 +292,7 @@ For all the relations assigned as functionality, determine if they are
 | Inverse qualified functionality           |    |    |    |    |
 | Inverse scoped functionality              |    |    |    |    |
 | Inverse qualified scoped functionality    |    |    |    |    |
-| Structural tautology                      |    |    |    |    |
+| Structural tautology                      |    | x  |  x |    |
 |                                           |    |    |    |    |
 | Symmetry                                  |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |
@@ -296,14 +304,15 @@ For all the relations assigned as functionality, determine if they are
 
 |                                           | 52 | 53 | 54 | 55 | 56 | 57 | 58 |
 | ---------                                 |----|----|----|----|----|----|----|
+| Subclass                                  |    |    |    |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |    |    |
 | Domain                                    |    |    |    |    |    |    |    |
 | Scoped domain                             |    |    |    |    |    |    |    |
-| Range                                     |    |    |    |    |    |    |    |
+| Range                                     | x  |  x |  x | x  | x  | x  | x  |
 | Scoped range                              |    |    |    |    |    |    |    |
-| Existential                               |    |    |    |    |    |    |    |
-| Inverse existential                       |    |    |    |    |    |    |    |
-| Functionality                             |  ✓ |    | ✓  |    |    |    |    |
+| Existential                               |  x | x  |  x |    |    |    |    |
+| Inverse existential                       |  x |  x |  x |    |    |    |    |
+| Functionality                             |  x |    | x  |    |    |    |    |
 | Qualified functionality                   |    |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    |    |    |    |
 | Qualified scoped functionality            |    |    |    |    |    |    |    |
@@ -311,7 +320,7 @@ For all the relations assigned as functionality, determine if they are
 | Inverse qualified functionality           |    |    |    |    |    |    |    |
 | Inverse scoped functionality              |    |    |    |    |    |    |    |
 | Inverse qualified scoped functionality    |    |    |    |    |    |    |    |
-| Structural tautology                      |    |    |    |    |    |    |    |
+| Structural tautology                      | x  | x  | x  | x  | x  | x  | x  |
 |                                           |    |    |    |    |    |    |    |
 | Symmetry                                  |    |    |    |    |    |    |    |
 | Asymmetry                                 |    |    |    |    |    |    |    |

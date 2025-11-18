@@ -120,8 +120,8 @@ Keeps track of all the aspects of a function, including the variables passed in 
 "A function can call 0 or more other functions"
 * `Function calledBy min 0 Function` <br />
 "A function can be called by 0 or more other functions"
-* `Function definedIn class exactly 1 Class` <br />
-"A function is defined in exactly one class"
+* `Function definedIn class min 0 max 1 Class` <br />
+"A function is defined in either 0 or 1 class"
 * `Function definedIn namespace min 1 Namespace` <br />
 "A function is defined in one or more namespaces"
 * `Function containsInstruction min 1 instruction` <br />
