@@ -78,10 +78,10 @@ For all the relations assigned as functionality, determine if they are
 | Class disjointness                        |    |    |    |    |    |    |    |    |
 | Domain                                    |    |    |    |    |    |    |    |    |
 | Scoped domain                             |    |    |    |    |    |    |    |    |
-| Range                                     |    |    | x  |    |    |    |    |    |
-| Scoped range                              |    |    |    |    |    |    |    |    |
+| Range                                     | x  | x  | x  | x  |    |    |    |    |
+| Scoped range                              | ?  | ?  |    |    |    |    |    |    |
 | Existential                               |    |    | x  | x  |    | x  |    |    |
-| Inverse existential                       |    |    |    |    |    |    |    |    |
+| Inverse existential                       | x  | x  |    |    |    |    |    |    |
 | Functionality                             |    | x  | x  | x  | x  | x  | x  | x  |
 | Qualified functionality                   |    |    |    |    |    |    |    |    |
 | Scoped functionality                      |    |    |    |    | x  | x  |    | x  |
