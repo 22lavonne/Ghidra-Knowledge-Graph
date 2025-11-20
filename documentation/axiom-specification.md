@@ -12,131 +12,96 @@ For all the relations assigned as functionality, determine if they are
 
 ## List of Axioms
 
-| Number    | Subject       | Relationship      | Object        |
-| --------- | --------      | -----------       | -----------   |
-| 1         | Symbol        | hasReference      | Reference |
-| 2         | Symbol        | hasPrimaryReference | Reference|
-| 3         | Symbol        | superClassOf| Class|
-| 4         | Symbol        | superClassOf| Function|
-| 5         | Symbol        | superClassOf| Variable|
-| 6         | Symbol        | superClassOf| Namespace|
-| 7         | Symbol        | superClassOf| Label|
-| 8         | Symbol        | superClassOf| Import|
-| 9         | Symbol        | superClassOf| Export|
-| 10        | Reference     | hasSourceAddress| Address|
-| 11        | Reference     | hasDestinationAddress| Address|
-| 12        | Reference     | hasType| xsd:string|
-| 13        | Reference     | hasOperandIndex| xds:integer|
-| 14        | Address       | pointsTo| Symbol|
-| 15        | Address       | addressOf | xsd:string|
-| 16        | Import        | subClassOf | Symbol |
-| 17        | Export        | subClassOf | Symbol |
-| 18        | Import        | declares | DLL|
-| 19        | Export        | declares | DLL|
-| 20        | Import        | hasLabel | Label |
-| 21        | Export        | hasLabel | Label |
-| 22        | Function      | subClassOf | Symbol |
-| 23        | Function      | hasLabel | Label |
-| 24        | Function      | hasReturnType | DataType |
-| 25        | Function      | returns | Variable  |
-| 26        | Function      | declaresLocalVariable | Variable |
-| 27        | Function      | hasParameter | Variable |
-| 28        | Function      | calls | Function |
-| 29        | Function      | calledBy | Function |
-| 30        | Function      | definedIn | Class |
-| 31        | Function      | definedIn | Namespace |
-| 32        | Function      | containsInstruction | Instruction |
-| 33        | Variable      | subClassOf | Symbol |
-| 34        | Variable      | definedIn | Namespace |
-| 35        | Variable      | definedInGlobalNamespace | Namespace |
-| 36        | Variable      | localVariableDefinedIn | Class |
-| 37        | Variable      | hasLabel | Label |
-| 38        | Variable      | hasDataType | Datatype |
-| 39        | Data Type     | hasDataTypeName | xsd:string|
-| 40        | Class         | subClassOf | Symbol |
-| 41        | Class         | definesFunction | Function |
-| 42        | Class         | hasLabel | Label |
-| 43        | Class         | definesLocalVariable | Variable |
-| 44        | Class         | definedIn | Namespace |
-| 45        | Label         | subClassOf | Symbol |
-| 46        | Label         | hasName | xsd:string|
-| 47        | Label         | hasAddress | Address |
-| 48        | Namespace     | subClassOf | Symbol |
-| 49        | Namespace     | declares| Symbol|
-| 50        | Symbol        | declaredBy| Namespace|
-| 51        | Namespace     | hasName | xsd:string |
-| 52        | Instruction   | hasOpcode | Opcode |
-| 53        | Instruction   | hasSourceOperand | Operand |
-| 54        | Instruction   | hasDestinationOperand | Operand |
-| 55        | Address       | performsRole | Operand |
-| 56        | Register      | performsRole | Operand |
-| 57        | ImmediateOperand| performsRole | Operand |
-| 58        | Symbol        | performsRole | Operand |
+| #     | Subject       | Relationship          | Object        |
+| ----- | ------------- | -----------------     | -----------   |
+| 1     | Symbol        | hasReference          | Reference     |
+| 2     | Symbol        | hasPrimaryReference   | Reference     |
+| 3     | Reference     | hasSourceAddress      | Address       |
+| 4     | Reference     | hasDestinationAddress | Address       |
+| 5     | Reference     | hasType               | xsd:string    |
+| 6     | Reference     | hasOperandIndex       | xds:integer   |
+| 7     | Address       | pointsTo              | Symbol        |
+| 8     | Address       | addressOf             | xsd:string    |
+| 9     | Import        | subClassOf            | Symbol        |
+| 10    | Export        | subClassOf            | Symbol        |
+| 11    | Import        | declares              | DLL           |
+| 12    | Export        | declares              | DLL           |
+| 13    | Import        | hasLabel              | Label         |
+| 14    | Export        | hasLabel              | Label         |
+| 15    | Function      | subClassOf            | Symbol        |
+| 16    | Function      | hasLabel              | Label         |
+| 17    | Function      | hasReturnType         | DataType      |
+| 18    | Function      | returns               | Variable      |
+| 19    | Function      | declaresLocalVariable | Variable      |
+| 20    | Function      | hasParameter          | Variable      |
+| 21    | Function      | calls                 | Function      |
+| 22    | Function      | calledBy              | Function      |
+| 23    | Function      | definedIn             | Class         |
+| 24    | Function      | definedIn             | Namespace     |
+| 25    | Function      | containsInstruction   | Instruction   |
+| 26    | Variable      | subClassOf            | Symbol        |
+| 27    | Variable      | definedIn             | Namespace     |
+| 28    | Variable      | definedInGlobalNamespace  | Namespace |
+| 29    | Variable      | localVariableDefinedIn    | Class     |
+| 30    | Variable      | hasLabel              | Label         |
+| 31    | Variable      | hasDataType           | Datatype      |
+| 32    | Data Type     | hasDataTypeName       | xsd:string    |
+| 33    | Class         | subClassOf            | Symbol        |
+| 34    | Class         | definesFunction       | Function      |
+| 35    | Class         | hasLabel              | Label         |
+| 36    | Class         | definesLocalVariable  | Variable      |
+| 37    | Class         | definedIn             | Namespace     |
+| 38    | Label         | subClassOf            | Symbol        |
+| 39    | Label         | hasName               | xsd:string    |
+| 40    | Label         | hasAddress            | Address       |
+| 41    | Namespace     | subClassOf            | Symbol        |
+| 42    | Namespace     | declares              | Symbol        |
+| 43    | Symbol        | declaredBy            | Namespace     |
+| 44    | Namespace     | hasName               | xsd:string    |
+| 45    | Instruction   | hasOpcode             | Opcode        |
+| 46    | Instruction   | hasSourceOperand      | Operand       |
+| 47    | Instruction   | hasDestinationOperand | Operand       |
+| 48    | Address       | performsRole          | Operand       |
+| 49    | Register      | performsRole          | Operand       |
+| 50    | ImmediateOperand  | performsRole      | Operand       |
+| 51    | Symbol        | performsRole          | Operand       |
 
 
 
 ## Axiom Selection
 
-### Symbol
+### Symbol, Reference, and Address
 
-|                                           | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 
-| ---------                                 |----|----|----|----|----|----|----|----|----|
-| Subclass                                  |    |    |    |    |    |    |    |    |    |
-| Class disjointness                        |    |    |    |    |    |    |    |    |    |  
-| Domain                                    |    |    |    |    |    |    |    |    |    |
-| Scoped domain                             |    |    |    |    |    |    |    |    |    |
-| Range                                     |    |    |    |    |    |    |    |    |    |
-| Scoped range                              |    |    |    |    |    |    |    |    |    |
-| Existential                               |    |    |    |    |    |    |    |    |    |
-| Inverse existential                       |    |    |    |    |    |    |    |    |    |
-| Functionality                             |    | x  |    |    |    |    |    |    |    |
-| Qualified functionality                   |    |    |    |    |    |    |    |    |    |
-| Scoped functionality                      |    |    |    |    |    |    |    |    |    |
-| Qualified scoped functionality            |    | x  |    |    |    |    |    |    |    |
-| Inverse functionality                     |    |    |    |    |    |    |    |    |    |
-| Inverse qualified functionality           |    |    |    |    |    |    |    |    |    |
-| Inverse scoped functionality              |    |    |    |    |    |    |    |    |    |
-| Inverse qualified scoped functionality    |    |    |    |    |    |    |    |    |    |
-| Structural tautology                      | x  | x  |    |    |    |    |    |    |    |
-|                                           |    |    |    |    |    |    |    |    |    |
-| For the Property                          |    |    |    |    |    |    |    |    |    |
-| Symmetry                                  |    |    |    |    |    |    |    |    |    |
-| Asymmetry                                 | x  | x  | x  | x  | x  | x  | x  | x  | x  |
-| Transitivity                              | x  | x  | x  | x  | x  | x  | x  | x  | x  |
-| Reflexivity                               |    |    |    |    |    |    |    |    |    |
-| irreflexivity                             | x  | x  | x  | x  | x  | x  | x  | x  | x  |
-
-### Reference and Address
-
-|                                           | 10 | 11 | 12 | 13 | 14 | 15 | 
-| ---------                                 |----|----|----|----|----|----|
-| Subclass                                  |    |    |    |    |    |    |
-| Class disjointness                        |    |    |    |    |    |    |
-| Domain                                    |    |    |    |    |    |    |
-| Scoped domain                             |    |    |    |    |    |    |
-| Range                                     | x  |    |    |    |    |    |
-| Scoped range                              |    |    |    |    |    |    |
-| Existential                               | x  | x  |    | x  |    |    |
-| Inverse existential                       |    |    |    |    |    |    |
-| Functionality                             | x  | x  | x  | x  | x  | x  |
-| Qualified functionality                   |    |    |    |    |    |    |
-| Scoped functionality                      |    |    | x  | x  |    | x  |
-| Qualified scoped functionality            | x  | x  |    |    | x  |    |
-| Inverse functionality                     |    |    |    |    |    |    |
-| Inverse qualified functionality           |    |    |    |    |    |    |
-| Inverse scoped functionality              |    |    |    |    |    |    |
-| Inverse qualified scoped functionality    |    |    |    |    |    |    |
-| Structural tautology                      |    |    |    |    | x  | x  |
-|                                           |    |    |    |    |    |    |
-| Symmetry                                  |    |    |    |    |    |    |
-| Asymmetry                                 | x  | x  | x  | x  | x  | x  |
-| Transitivity                              |    |    |    |    |    |    |
-| Reflexivity                               |    |    |    |    |    |    |
-| irreflexivity                             | x  | x  | x  | x  | x  | x  |
+|                                           | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 
+| ---------                                 |----|----|----|----|----|----|----|----|
+| Subclass                                  |    |    |    |    |    |    |    |    |
+| Class disjointness                        |    |    |    |    |    |    |    |    |
+| Domain                                    |    |    |    |    |    |    |    |    |
+| Scoped domain                             |    |    |    |    |    |    |    |    |
+| Range                                     |    |    | x  |    |    |    |    |    |
+| Scoped range                              |    |    |    |    |    |    |    |    |
+| Existential                               |    |    | x  | x  |    | x  |    |    |
+| Inverse existential                       |    |    |    |    |    |    |    |    |
+| Functionality                             |    | x  | x  | x  | x  | x  | x  | x  |
+| Qualified functionality                   |    |    |    |    |    |    |    |    |
+| Scoped functionality                      |    |    |    |    | x  | x  |    | x  |
+| Qualified scoped functionality            |    | x  | x  | x  |    |    | x  |    |
+| Inverse functionality                     |    |    |    |    |    |    |    |    |
+| Inverse qualified functionality           |    |    |    |    |    |    |    |    |
+| Inverse scoped functionality              |    |    |    |    |    |    |    |    |
+| Inverse qualified scoped functionality    |    |    |    |    |    |    |    |    |
+| Structural tautology                      | x  | x  |    |    |    |    | x  | x  |
+|                                           |    |    |    |    |    |    |    |    |
+| For the Property                          |    |    |    |    |    |    |    |    |
+| Symmetry                                  |    |    | x  | x  | x  | x  | x  | x  |
+| Asymmetry                                 | x  | x  |    |    |    |    |    |    |
+| Transitivity                              | x  | x  |    |    |    |    |    |    |
+| Reflexivity                               |    |    |    |    |    |    |    |    |
+| irreflexivity                             | x  | x  | x  | x  | x  | x  | x  | x  |
 
 ### Import and Export
 
-|                                           | 16 | 17 | 18 | 19 | 20 | 21 | 
+|                                           | 9  | 10 | 11 | 12 | 13 | 14 | 
 | ---------                                 |----|----|----|----|----|----|
 | Subclass                                  | x  | x  |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |    |
@@ -165,7 +130,7 @@ For all the relations assigned as functionality, determine if they are
 
 ### Function
 
-|                                           | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 |
+|                                           | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
 | ---------                                 |----|----|----|----|----|----|----|----|----|----|----|
 | Subclass                                  | x  |    |    |    |    |    |    |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |    |    |    |    |    |    |  
@@ -193,7 +158,7 @@ For all the relations assigned as functionality, determine if they are
 
 ### Variable and Data Type
 
-|                                           | 33 | 34 | 35 | 36 | 37 | 38 | 39 |
+|                                           | 26 | 27 | 28 | 29 | 30 | 31 | 32 |
 | ---------                                 |----|----|----|----|----|----|----|
 | Subclass                                  | x  |    |    |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |    |    |
@@ -220,7 +185,7 @@ For all the relations assigned as functionality, determine if they are
 | irreflexivity                             | x  | x  | x  | x  | x  | x  | x  |
 
 ### Class
-|                                           | 40 | 41 | 42 | 43 | 44 |
+|                                           | 33 | 34 | 35 | 36 | 37 |
 | ---------                                 |----|----|----|----|----|
 | Subclass                                  | x  |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |
@@ -247,7 +212,7 @@ For all the relations assigned as functionality, determine if they are
 | irreflexivity                             | x  | x  | x  | x  | x  |
 
 ### Label
-|                                           | 45 | 46 | 47 |
+|                                           | 38 | 39 | 40 |
 | ---------                                 |----|----|----|
 | Subclass                                  | x  |    |    |
 | Class disjointness                        |    |    |    |
@@ -274,7 +239,7 @@ For all the relations assigned as functionality, determine if they are
 | irreflexivity                             | x  | x  | x  |
 
 ### Namespace
-|                                           | 48 | 49 | 50 | 51 |
+|                                           | 41 | 42 | 43 | 44 |
 | ---------                                 |----|----|----|----|
 | Subclass                                  | x  |    |    |    |
 | Class disjointness                        |    |    |    |    |
@@ -302,7 +267,7 @@ For all the relations assigned as functionality, determine if they are
 
 ### Instruction
 
-|                                           | 52 | 53 | 54 | 55 | 56 | 57 | 58 |
+|                                           | 45 | 46 | 47 | 48 | 49 | 50 | 51 |
 | ---------                                 |----|----|----|----|----|----|----|
 | Subclass                                  |    |    |    |    |    |    |    |
 | Class disjointness                        |    |    |    |    |    |    |    |
